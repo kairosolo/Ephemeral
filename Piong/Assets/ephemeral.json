@@ -1,0 +1,455 @@
+{
+  "passages": [
+    {
+      "text": "=><=\n(text-style:\"underline\")[''Ephemeral'']\n\nAllister gets to chat again with his most dearest friend.\n\n(text-colour:red)[//Content warning: Death, Violence//]\n\n[[Start the Journey | Intro]]",
+      "links": [
+        {
+          "name": "Start the Journey | Intro",
+          "link": "Start the Journey | Intro",
+          "broken": true
+        }
+      ],
+      "name": "Start",
+      "pid": "1",
+      "position": {
+        "x": "350",
+        "y": "200"
+      }
+    },
+    {
+      "text": "….”That day fastly approached again’, I thought to myself again.\n\nThis... sensation of nothingness. The hollow feeling in my gut, and the persistent sense that something is missing.  It's as if I'm just existing but not actually living. A soulless puppet.\n\nEven just breathing now is like living hell, but this day just makes it worse for me, as guilt flooded through me. It felt like I was drowning. \n\n\n//Allister//\n“..... It really has been 5 years since [[that|Intro2]].” \n",
+      "links": [
+        {
+          "name": "that|Intro2",
+          "link": "that|Intro2",
+          "broken": true
+        }
+      ],
+      "name": " Intro",
+      "pid": "2",
+      "position": {
+        "x": "500",
+        "y": "200"
+      }
+    },
+    {
+      "text": "When this day comes, I’d always come back to this spot. \n\nA small garden-like place near the borders of Filenore and Everwatch. \n\nA place where I feel solitude. I travel around the world as a famous alchemist, but this is the only place I could call “home”... Despite the sweet memories I had here, there’d be a hint of bitterness beneath it. \n\n>> [[Take a seat on the makeshift swing.|Intro3]]\n\n",
+      "links": [
+        {
+          "name": "Take a seat on the makeshift swing.|Intro3",
+          "link": "Take a seat on the makeshift swing.|Intro3",
+          "broken": true
+        }
+      ],
+      "name": "Intro2",
+      "pid": "3",
+      "position": {
+        "x": "500",
+        "y": "325"
+      }
+    },
+    {
+      "text": "While resting on the makeshift swing for a few hours, I felt someone standing beside me.\n\n(bg:#868e96)[//???//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[“....You’re here, as I expected.”]\n\nI turned out and was surprised by what I saw. \n\n\n\n>> (link-reveal: \"What did I see?\")[(replace: ?jurius)[\n\n<img src = \"https://raw.githubusercontent.com/beweiseflugal/PollyFiles/main/Ephemeral/1stcg.png\">\n\nI couldn’t hide the surprise in my face the moment my eyes landed on him.\n\nA man with short, black hair, as dark as night. Eyes like storm clouds, but gazed ever so gently at me. He carried a cold expression in his face, with his arms crossed as he approached, but I knew.\n\nI knew that he was the kindest person in Veldren.\n\nI called out his name. \n\n[[... Jurius?|Intro4]]\n\n]]\n|jurius>[]",
+      "links": [
+        {
+          "name": "... Jurius?|Intro4",
+          "link": "... Jurius?|Intro4",
+          "broken": true
+        }
+      ],
+      "name": "Intro3",
+      "pid": "4",
+      "position": {
+        "x": "500",
+        "y": "450"
+      }
+    },
+    {
+      "text": "(bg:#2b8a3e)[//Allister//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"... Jurius?\"]\n\nAt that moment, I knew I talked in a quivering voice. I probably got way too emotional seeing him again.\n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[“It’s been how many years since we saw each other.. ? I think 5?”]\n\nHe started to count using his fingers with a puzzled look on his face. Then proceeds to paint a ray of sunshine across his face.\n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[“Anyways.. I’m so glad to see you again.”]\n\nSeeing his smile always made me feel relieved. He rarely does so, but it felt like a burden was lifted upon me after seeing his face like that.\n\nI managed to calm down and decided to return his contagious smile. \n\n(bg:#2b8a3e)[//Allister//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"... Likewise.\"]\n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"There you go. Your face looks so much better with a smile.\"]\n\nIt feels good to talk to him [[again|Intro5]].",
+      "links": [
+        {
+          "name": "again|Intro5",
+          "link": "again|Intro5",
+          "broken": true
+        }
+      ],
+      "name": "Intro4",
+      "pid": "5",
+      "position": {
+        "x": "500",
+        "y": "575"
+      }
+    },
+    {
+      "text": "(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"Are you okay?\"]\n\nHe probably saw me with a dim expression in my face while sitting here. How's life been treating me anyways?\n\nIs it good? Could I still manage it? ..... Do I feel like (link-reveal: \"giving up\")[(replace: ?lie)[\n(bg:#2b8a3e)[//Allister//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"Doing great as always. You know me! Always grabbing  any opportunity I see.\"]\n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"..... You're lying to me.\"]\n\n(bg:#2b8a3e)[//Allister//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"Haha.. Read me like an open book...\"]\n\nOf course he'd know if I'm lying. He was my most closest friend. He knows how I'm always friendly with everyone I see. He knew how scheming and two-faced I was... He knew the good and bad about me.. Which is why now, I never wanted him to see this pathetic side of me.\n \n Jurius probably noticed how my expression got dimmer, as he opened his mouth with a worried expression-\n \n (bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"..... Is it.. Because of what happened-\"]\n \n I stiffened immediately upon hearing what he's trying to say. Hearing him trying to open up that topic.... Reminded me of the pain. I really don't want to talk about it. (text-style:\"shudder\")[Ever]. \n \n Jurius noticed how hesitant I am in talking about it. He looked at me for a minute with worry on his face, until he showed a smile.\n \n  (bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"So.. What you've been doing lately? I mean. we never got to talk for the past few years. Just wanted to know what you're up to. It's been so long since we talked, let's make the most of our time together.\"]\n\n//Time//. Despite the fact that I'm aware of how valuable it is, I always took it for granted. But now that I'm together with him again, I'm not about to make that mistake //again//.\n\nWhat should I talk about with him?\n\n(set: $talk to 'false')\n>> [[Reminisce about the past.|past]]\n>> [[Talk about my travels.|travels]]\n(if: $talk is 'true')[\n[[I have nothing else to talk about.|choice]]\n]\n]] already?\n|lie>[]\n",
+      "links": [
+        {
+          "name": "Reminisce about the past.|past",
+          "link": "Reminisce about the past.|past",
+          "broken": true
+        },
+        {
+          "name": "Talk about my travels.|travels",
+          "link": "Talk about my travels.|travels",
+          "broken": true
+        },
+        {
+          "name": "I have nothing else to talk about.|choice",
+          "link": "I have nothing else to talk about.|choice",
+          "broken": true
+        }
+      ],
+      "name": "Intro5",
+      "pid": "6",
+      "position": {
+        "x": "500",
+        "y": "700"
+      }
+    },
+    {
+      "text": "\n(bg:#2b8a3e)[//Allister//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"These days, I’ve been reminiscing about the past.\"]\n\n(bg:#2b8a3e)[//Allister//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"I remember going here back when I was young. I’d get tired of my father’s nagging from time to time.\"]\n\n(bg:#2b8a3e)[//Allister//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"“Allister. When you grow up, you should become the head of our family. Become a great merchant!”\"]\n\n\nI said as I imitated my Father’s deep voice. I get along with my parents, but the immense pressure they put onto me to take over the business always made me feel trapped. Alchemy has always been my passion, and I never wanted to manage my father’s stores.\n\n(bg:#2b8a3e)[//Allister//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"Sometimes, I get so pissed off by everything he said that I started coming here after my lessons. It was pretty hard finding this, with how secluded it is and all.\"]\n\nThis place became my //solace//. Sitting by the swing just to muse to myself. Collecting herbs to use for alchemy.\n\n(bg:#2b8a3e)[//Allister//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"Then one day while I was picking up herbs, I was surprised to see someone finding this spot too.\"]\n\nJurius snorted after my remark.\n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"Who could that be?\"]\n\n(bg:#2b8a3e)[//Allister//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"That guy was picking up flowers, then I saw my favorite flower in his hands. I got way too excited!\"]\n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"You started talking fast, explaining every part of the flower.  I couldn't keep up with what you said.\"]\n\nHe chuckled, as if picturing our first meeting in his mind again.\n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"… It amazed me how you knew so much.\"]\n\nJurius flashed a smile to my direction, then paused for awhile before he spoke [[again|past2]].\n",
+      "links": [
+        {
+          "name": "again|past2",
+          "link": "again|past2",
+          "broken": true
+        }
+      ],
+      "name": "past",
+      "pid": "7",
+      "position": {
+        "x": "350",
+        "y": "750"
+      }
+    },
+    {
+      "text": "I decided to tell him about my travels.\n\n(bg:#2b8a3e)[//Allister//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"I’ve started traveling… ever since that day.\"]\n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"I see.\"]\n\nJurius didn’t choose to question me. Instead, he comforted me through his gaze, urging me to continue talking.\n\n(bg:#2b8a3e)[//Allister//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"Remember when I told you I’d be a traveling alchemist? I decided to follow through with that dream.\"]\n\n(bg:#2b8a3e)[//Allister//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"I’ve been treating many villages through my journey.  It felt good to see the faces of people I've helped.\"]\n\nI said, as I gradually felt my chest ache. This thought that I had… it felt like my heart shattered into thousands of pieces. I paused for a while, saying what was on my mind after mustering up my courage.\n\n(bg:#2b8a3e)[//Allister//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\" I’m just sad that I don’t get to make that dream come true with you by my side. We promised we’d do it together. Traveling, I mean.\"]\n\nIt was silent. All I could hear was my own breathing as I waited for him to reply. \n\n....\n...\n..\n.\n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"… I’m sorry, Allister. I really am. \"]\n\n(bg:#2b8a3e)[//Allister//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"It’s fine.\"]\n\nI wish whatever I said to him is true - that it’s fine, that I’m //fine//. \nThe truth is, I could’ve said whatever I wanted at this moment, but there won’t be any difference. The emptiness and sadness I feel would still be here. \n\nI can’t turn back time. I knew I couldn't, and that’s what made this conversation more painful.\n(set: $talk to 'true')\nIt’s best that I end this [[conversation|Intro5-2]].\n\n\n",
+      "links": [
+        {
+          "name": "conversation|Intro5-2",
+          "link": "conversation|Intro5-2",
+          "broken": true
+        }
+      ],
+      "name": "travels",
+      "pid": "8",
+      "position": {
+        "x": "650",
+        "y": "775"
+      }
+    },
+    {
+      "text": "...\n\nSilence took over the garden again. I stared down at my feet as I tried to swing them to get this awkward silence off my mind.\n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\".... Allister?\"]\n\nJurius broke the silence first. I turned into his direction.\n\n(bg:#2b8a3e)[//Allister//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"Is something bothering you, Jurius?\"]\n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"....\"]\n\nHe stared grimly at me for a few seconds, before opening his mouth again.\n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"Well.. It's been 5 years since that happened. I (text-style:\"blur\")[was just thinking]..\"]\n\nMy heart thudded in my chest. \n\nBreathing was hard. Really hard. \n\nI already knew what he wanted to talk about.\n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"Do you really not want to (text-style:\"blur\")[talk about it]..? (text-style:\"blur\")[With me]?\"]\n\nDo I want to talk about it..?\n\n(text-style:\"blur\")[Do I have to talk about it..?]\n\n(text-style:\"blurrier\")[... Do I really want to..?]\n....\n...\n>> [[Change the subject.|end1]]\n(if: $end_1_cleared is 'true')[>> [[Open up to him.|flashback]]]\n\n",
+      "links": [
+        {
+          "name": "Change the subject.|end1",
+          "link": "Change the subject.|end1",
+          "broken": true
+        },
+        {
+          "name": "Open up to him.|flashback",
+          "link": "Open up to him.|flashback",
+          "broken": true
+        }
+      ],
+      "name": "choice",
+      "pid": "9",
+      "position": {
+        "x": "500",
+        "y": "1000"
+      }
+    },
+    {
+      "text": "(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\" I loved all the stories and myths you told me when we were kids.\"]\n\nWhen we were kids, I used to share different stories to Jurius all the time. He didn't have books back in his village, so I'd bring different storybooks everytime we'd meet here.\n\n(bg:#2b8a3e)[//Allister//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"They were all so interesting, right? I had fun sharing them with you! \"]\n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"Me too.\"]\n\nJurius showed me a smile, but I could see the tinge of sadness on his face.\n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"But.. the most memorable story was the one you told me on the day you asked for my name.\"]\n\n(bg:#2b8a3e)[//Allister//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"Ah...\"]\n\nI remembered the day when I asked him his name. He kept silent for a few minutes then spoke up, telling me he never had one. In fact, many children in their village weren’t blessed to have names. \n\nI didn’t know what to say. Wasn’t it a bit cruel? Since I knew that he came from the other side of the garden, I knew the place where he lived - Everwatch. The people who lived there absolutely detested magic and did not use magic barriers to protect settlements, so I knew of the cruel practices that villages do there to keep monsters at bay. Perhaps, the village where he came from offered children to monsters so that the adults could stay alive?\n\nIt’s fucking //disgusting//. \n\nDid he remember his village? Is that why he felt sadness?\n\nAt that time, I remembered telling him an old myth. \n\nAt the War of Navarre, there was a knight whose legacy lived on. He was brave, kind, and strong. He protected a lot of people when the enemy’s undead army attacked. Because of his actions, the people then begin to remember his name - Jurius.\n\n(bg:#2b8a3e)[//Allister//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"Jurius. A beautiful name, don’t you think? I think it really suits you.\"]\n\nI told him with a smile on my face. Before, I probably just said that myth to him to make him feel better.. Or was it for me so I couldn’t stand to see the frown on his face? All I knew is he became happier upon hearing that name, and that’s the only thing that mattered.\n\nJurius then looked at me, as his lips formed a curve.\n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"It is.\"]\n\nI felt relieved. Talking about the past with him made me feel a little [[alive|Intro5-2]] again.\n\n\n\n\n\n",
+      "links": [
+        {
+          "name": "alive|Intro5-2",
+          "link": "alive|Intro5-2",
+          "broken": true
+        }
+      ],
+      "name": "past2",
+      "pid": "10",
+      "position": {
+        "x": "350",
+        "y": "875"
+      }
+    },
+    {
+      "text": "What should I talk about with him?\n\n>> [[Reminisce about the past.|past]]\n>> [[Talk about my travels.|travels]]\n(if: $talk is 'true')[>> [[I have nothing else to talk about.|choice]]\n]",
+      "links": [
+        {
+          "name": "Reminisce about the past.|past",
+          "link": "Reminisce about the past.|past",
+          "broken": true
+        },
+        {
+          "name": "Talk about my travels.|travels",
+          "link": "Talk about my travels.|travels",
+          "broken": true
+        },
+        {
+          "name": "I have nothing else to talk about.|choice",
+          "link": "I have nothing else to talk about.|choice",
+          "broken": true
+        }
+      ],
+      "name": "Intro5-2",
+      "pid": "11",
+      "position": {
+        "x": "500",
+        "y": "825"
+      }
+    },
+    {
+      "text": "(bg:#2b8a3e)[//Allister//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"...... Jurius.\"]\n\nBefore I knew it, tears streamed down of my face. It hurts too much. But I'll never get a chance to get this off my chest. Even if it felt like my throat is burning everytime I try to speak up.\n\n(bg:#2b8a3e)[//Allister//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"... I still can't forgive myself for what happened 5 years ago.\"]\n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"Mhm. I'm listening.\"]\n\nEven now, I can still clearly remember everything that happened that [[day|flashback-2]].\n",
+      "links": [
+        {
+          "name": "day|flashback-2",
+          "link": "day|flashback-2",
+          "broken": true
+        }
+      ],
+      "name": "flashback",
+      "pid": "12",
+      "position": {
+        "x": "625",
+        "y": "1100"
+      }
+    },
+    {
+      "text": "I can't talk about it. No matter how much I trusted him. Hell, even seeing him now just reminded me of what happened all those years.\n\nI tried to change the subject, hoping he'd understand.\n\n(bg:#2b8a3e)[//Allister//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"... We have a perfect view of the sunset here. Why don't we watch it together? The day's about to end anyways.\"]\n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"....\"]\n\nJurius stared at me, worry was evident on his face. He then wiped his eyes, and that was really painful for me to watch.\nI'm// sorry//, Jurius.. I really can't bring myself to talk about it. No matter how close we are.\n\nHe then nodded his head and showed me his brightest smile.\n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"Yeah, we could do that.\"]\n\nWe watched the sunset together, as my heart felt heavy. I knew that once this day ends, I won't see him again. \n\nI'll be left alone. \nEven with this guilt and emptiness inside me. \nAlthough the sorrow never goes away, I'll learn to live with it.\n...\n..\n.\n.\n\n.... The sun sets, and he's gone. The time I spent with him was ephemeral, yet I didn't get to say everything I wanted to.\n(set: $end_1_cleared to 'true')\nNever to be seen [[again|end1-conclusion]].\n\n\n\n\n\n",
+      "links": [
+        {
+          "name": "again|end1-conclusion",
+          "link": "again|end1-conclusion",
+          "broken": true
+        }
+      ],
+      "name": "end1",
+      "pid": "13",
+      "position": {
+        "x": "375",
+        "y": "1100"
+      }
+    },
+    {
+      "text": "(align:\"<==\")+(box:\"=XX=\")[=\n''ENDING 1:'' (text-style:\"underline\")[Gone]\n\nThe day ends with Allister going back to his life as a 'soulless puppet'.\nBut just like what he said, he'll learn to live with it.\n\nAs to Jurius's whereabouts, he never knew where his friend went.\n\nWhat if you tried going through his (link-reveal: \"day\")[(replace: ?jurius) [\n(Replay the game, and you might unlock more endings and choices other than this one.)\n\n]] again?\n|jurius>[]\n\n>> [[End.|Start]]\n\n\n\n",
+      "links": [
+        {
+          "name": "End.|Start",
+          "link": "End.|Start",
+          "broken": true
+        }
+      ],
+      "name": "end1-conclusion",
+      "pid": "14",
+      "position": {
+        "x": "250",
+        "y": "1225"
+      }
+    },
+    {
+      "text": "It was 5 years ago...\n\nWhen all of that happened.\n\nJurius and I had planned to leave the and explore the world. Jurius, who planned to leave Everwatch and to see what was beyond Veldren, and there was me, who was excited to pursue my dream as a traveling alchemist, leaving my merchant family.\n\nWe were both excited, like a child receving a toy for the first time. \n\nBut I always knew that fate wouldn't be so kind to two [[naive|flashback-3]] friends.",
+      "links": [
+        {
+          "name": "naive|flashback-3",
+          "link": "naive|flashback-3",
+          "broken": true
+        }
+      ],
+      "name": "flashback-2",
+      "pid": "15",
+      "position": {
+        "x": "625",
+        "y": "1225"
+      }
+    },
+    {
+      "text": "Before we left Everwatch, I promised Jurius that I'd help him free the people he protected in his village. \n\nI didn't really cared for those villagers but I'd still do it anyways. Not like I'm bragging but I only care about those who I care about, and Jurius is one of them... I did promise Jurius to help him in whatever he wanted, after all, so I'm going to his village alongside him. \n\nAs soon as we arrived in the village, we hid under the bushes. Jurius covered my mouth and started to whisper slowly. \n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"Allister, listen closely. The people here absolutely despise magicians. You should hide in here while I sneak out the others.\"]\n\n//What is he even saying?// Does he just expect me to wait here then, I don't know, let him get into trouble? \n\nI immediately removed the hand covering my lips and began to speak.\n\n(bg:#2b8a3e)[//Allister//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"No way. You think I'm just gonna watch you go there without any backup? I'm coming with you.\"]\n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"It's dangerous-\"]\n\n(bg:#2b8a3e)[//Allister//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"As if going there alone is much safer. Are you kidding me?\"]\n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"Allister...\"]\n\n(bg:#2b8a3e)[//Allister//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"If you leave me here alone, I'm walking directly to the village's entrance.\"]\n\nJurius pursed his lips, a slight furrow between his brows as he looked at me like I'm the most annoying thing in the world. To be fair, I am acting like a brat right now, I knew he just wanted me to be safe, but I can't just leave him alone.\n\nAfter a few seconds, he sighed deeply and stood carefully, offering his hands to me.\n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"Let's go then.\"]\n\nI grabbed his hand and lifted myself up, then proceeded to follow him through the bushes, eventually reaching a [[blind spot|flashback-4]] in the village.\n\n",
+      "links": [
+        {
+          "name": "blind spot|flashback-4",
+          "link": "blind spot|flashback-4",
+          "broken": true
+        }
+      ],
+      "name": "flashback-3",
+      "pid": "16",
+      "position": {
+        "x": "625",
+        "y": "1350"
+      }
+    },
+    {
+      "text": "The plan went smoothly than I expected, Jurius easily gathered all the people he wanted to bring with him to Filenore. Our plan was to help them find refuge through my family then the two of us would continue with our dream- To be traveling together across Veldren, as knight and alchemist.\n\nUpon leaving the building where we all gathered along the people, I froze. The men of the village were surrounding the building. //Shit//. One of them probably saw us sneaking around and alerted the others.\n\nOne of the men spoke up.\n\n(bg:#a61e4d)[//???//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"That cursed kid brought a fucking //mage// in our village. I knew he'd fuck up sooner or later.\"]\n\n(bg:#a61e4d)[//???//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"Kill the mage first. Deal with that guy later.\"]\n\nThe men started to walk closer, but Jurius put his hand in front of me, as if telling me he'd protect me from anything.\n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\".... You have to get through me first before hurting him.\"]\n\n(bg:#2b8a3e)[//Allister//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"Jurius.\"]\n\nHe turned his head after hearing me call out his name, then gave me his brightest smile.\n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"I'll be fine. Can I ask you to protect the villagers?\"]\n\nI nodded slowly. After that, he turned to the men who planned to get rid of us. As Jurius raised his sword, the men got ready to attack. \n\nIf I were to choose, I'd rather try to save Jurius... But I can't just ignore his plea to save the villagers. \n\nI checked my mana and realized that I'm only able to save one of the two-  Jurius, or the villagers who are now behind me. Everwatch's natural terrain of having magic-nullifying properties is affecting me.\n\n//Dammit//, I don't have time. What do I do?\n\n>> [[Save Jurius.|jurius]]\n>> [[Save the villagers.|villagers]]\n\n\n\n\n\n",
+      "links": [
+        {
+          "name": "Save Jurius.|jurius",
+          "link": "Save Jurius.|jurius",
+          "broken": true
+        },
+        {
+          "name": "Save the villagers.|villagers",
+          "link": "Save the villagers.|villagers",
+          "broken": true
+        }
+      ],
+      "name": "flashback-4",
+      "pid": "17",
+      "position": {
+        "x": "625",
+        "y": "1475"
+      }
+    },
+    {
+      "text": "As soon as Jurius and the men ran to start attacking each other, I ran to his side and began to support him in battle.\n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"?!\"]\n\nJurius was surprised, but he continued fighting. After fighting with him for a few minutes, I suddenly heard blood curdling screams from behind – And there I saw,\n\nThe villagers we were supposed to protect, getting brutally murdered.\n\n(bg:#2b8a3e)[//Allister//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"Shit! They got past our defenses!\"]\n\nThe villagers started crying, pleading for help.\n\n(bg:#a61e4d)[//???//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"(text-style:\"rumble\")[AGGUGHHHHHHHhhHgH! P-PLEASE! PLEASE HAVE-]\"]\n\nThe villager screams before getting her head cut off. After seeing this sight, I couldn't move. I felt numb. I was scared. What should I do? I closed my eyes shut and gripped my staff tight as I heard the children and women scream in horror while getting slaughtered.\n\nI couldn't do anything… After all, Jurius was my top priority, I wouldn't let him get killed!\n\nEven if it meant I had to sacrifice these people, I wouldn't care, as long as Jurius is alive.\n\nJurius was occupied with fighting, so he didn’t know what was happening to the children and women. \n\nIt’s okay, I’ll just keep supporting him until the fighting is over.\n\nAfter what seemed like an eternity, the fighting stopped. Jurius froze as he started to look around, all the people he’s slain until his eyes land on the corpses of the children and women. \n\nIt's as if his soul left his body.\n\n(bg:#2b8a3e)[//Allister//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"Wait! Jurius!\"]\n\nJurius ran to them. Stood over their dead bodies … and turned to me.\n\n(bg:#2b8a3e)[//Allister//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"...\"]\n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"Weren't you supposed to protect them?! What the hell happened here, Allister?!\"]\n\n(bg:#2b8a3e)[//Allister//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"... I-I had no choice… I couldn't just let you die while fighting them.\"]\n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"And let all these innocent people die?!\"]\n\n(bg:#2b8a3e)[//Allister//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"... \"]\n\nJurius grabs my shoulders and grips it. Hard. I can feel his nails digging into my skin.\n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"ANSWER ME, ALLISTER!\"]\n\n(bg:#2b8a3e)[//Allister//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\" YEAH! I LET THEM DIE! IS THAT WHAT YOU WANTED TO HEAR? I DON’T GIVE TWO FUCKS ABOUT THESE VILLAGERS, I JUST WENT WITH YOU BECAUSE YOU WANTED TO SAVE THEM. BUT I WANTED TO SAVE YOU! I COULD LET THREE, NO FOUR WHOLE VILLAGES DIE AS LONG AS- \"]\n\nI didn't have a chance to finish what I was saying. It was so fast. I felt a fist hit my right cheek and I fell to the ground. I got angry as I stood up again.\n\n(bg:#2b8a3e)[//Allister//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"HEY, THAT HURTS!\"]\n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"I sure hope it does, that’s small compared to what you let these innocent people go through, you fucking asshole.\"]\n\nJurius looks at me with a scowl, disappointed and tears evident in his face, before walking away, leaving me at the [[village|jurius2]].\n\n\n",
+      "links": [
+        {
+          "name": "village|jurius2",
+          "link": "village|jurius2",
+          "broken": true
+        }
+      ],
+      "name": "jurius",
+      "pid": "18",
+      "position": {
+        "x": "500",
+        "y": "1600"
+      }
+    },
+    {
+      "text": "As soon as Jurius and the men ran to start attacking each other, I put up a barrier to protect the villagers and myself. \n\n(bg:#2b8a3e)[//Allister//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"Get down! Cover your eyes!.\"]\n\nThe villagers immediately followed my instructions, and proceeded to get down.\n\nI didn't have time to think, and immediately did what he asked me to. To keep the villagers //safe//. I closed my eyes to concentrate on the barrier, and prayed to all the Deities to keep Jurius safe. \n\nI heard voices of men groaning in pain, and splattering of blood as it hits the barrier I set up. My prayers got stronger.\n\nPlease.. Let him be safe.....\n\n(text-style:\"blur\")[Please.......]\n\n(text-style:\"blurrier\")[Please.]\n....\n...\n..\n.\n\nAfter what seemed like forever, the noises from outside died down. \n\nI began to open my eyes slowly, and what I saw felt like a stab into my chest.\n\nJurius was standing with his back to me, the clothes he's wearing barely holding together by a few frayed threads, as slashes decorated his skin. \n\nHis blood or that of his foes was all over the ground; I had no way of knowing.\n\nBodies have piled up under his feet, each of them dying a brutal death. \n\nBut that's not //important// right now. My eyes went back to Jurius, who's barely standing.\n\nAs soon as I yelled his name,\n\n(bg:#2b8a3e)[//Allister//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[(text-style:\"rumble\")[\"JURIUS!\"]]\n\nhis legs buckled. He tried to turn around and walk towards me, but it took everything he had to keep from collapsing at that [[very moment|villagers2]]. \n\n",
+      "links": [
+        {
+          "name": "very moment|villagers2",
+          "link": "very moment|villagers2",
+          "broken": true
+        }
+      ],
+      "name": "villagers",
+      "pid": "19",
+      "position": {
+        "x": "750",
+        "y": "1600"
+      }
+    },
+    {
+      "text": "When I finally got to him, his eyes were already closed, and I cradled him in my arms while attempting to clean the blood from his face. \n\nHe tried to reach for me, but his hands shook and his skin was already pallid and icy.\n\nI grabbed the hands trying to reach for me as tears cascade down my face.\n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"... Allister.\"]\n\nHe smiled weakly while looking at me. \n\nHow? //How?// How could you even smile, at this moment?\n\n(bg:#2b8a3e)[//Allister//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"Stop talking, dammit! You'll open up your wounds!\"]\n\nI immediately tried to heal his wounds, even though I knew it was already too late.\n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"Th-thank you for s..saving the villagers.\"]\n\nTears won't stop flowing from my eyes, as I'm unable to save him. \n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"Can you hear me out.. one last.. time?\"]\n\n(bg:#2b8a3e)[//Allister//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"... Anything for you.\"]\n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"I'm.. grateful for the time we've spent.. together.\"]\n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"Grateful.. to be able to spend time with you.. all these years.\"]\n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"Grateful.. Extremely grateful... to be able to call myself as your friend.\"]\n\nUpon saying that, he smiled one last time, before the soul in his eyes left. \n\n... And I [[howled|villagers3]] to the sky, cursing everything.\n\n",
+      "links": [
+        {
+          "name": "howled|villagers3",
+          "link": "howled|villagers3",
+          "broken": true
+        }
+      ],
+      "name": "villagers2",
+      "pid": "20",
+      "position": {
+        "x": "750",
+        "y": "1725"
+      }
+    },
+    {
+      "text": "I can still feel the memories against my skin like cold, cutting steel.\n\nI started to hate everything. \n\nI hated how the villagers were the one I was supposed to protect.\n\nI hated the Deities, for not protecting Jurius.\n\nAnd lastly...\n\nI hated Jurius... I hated how he left me alone in this world.\n\nJurius, who left him just as suddenly as he came into his life.\n\nI knew how hard life must've been to Jurius. He was abused by his father, not even granting him a name. He was born in a village where women and children were offered to monsters. He lived in seclusion, not even knowing what was beyond Everwatch.\n\nAnd despite all his sufferings, Jurius didn’t let anyone know of his struggles. It was definitely something he'd do, to hide his own pain so that people around him wouldn’t get burdened. To put them before himself.\n\nIn the end, he [[died|villagers4]] because of it.\n\n",
+      "links": [
+        {
+          "name": "died|villagers4",
+          "link": "died|villagers4",
+          "broken": true
+        }
+      ],
+      "name": "villagers3",
+      "pid": "21",
+      "position": {
+        "x": "750",
+        "y": "1850"
+      }
+    },
+    {
+      "text": "<img src = \"https://raw.githubusercontent.com/beweiseflugal/PollyFiles/main/Ephemeral/cgsix.png\">\n\nI turned my body to his now-fading image, while tears continued to flow.\n\n(bg:#2b8a3e)[//Allister//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"Jurius. I'm sorry.. Had I become more selfish, I would've just chosen to save you.. The truth is, I'd rather you hate me than be gone from this world!\"]\n\nTo think it would be this unbearable.\nI'm still here, and now.. you're not.\nNothing will ever fill hole you left behind.\nI learn to live with it, but the pain never subsides.\n\nHis image smiled at me.\n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"It wasn't your fault. I'm really you chose to help them instead of me.\"]\n\nI snapped at what I heard.\n\n(bg:#2b8a3e)[//Allister//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"''FUCK THAT''! I'd rather let ten villagers die instead of you! Why can't you understand... That...\"]\n\nMy cries made it harder for me to speak, as I heard him whisper to me.\n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"My time is running out... So I'll say this again: It wasn't your fault for saving those villagers. It was mine. I'm sorry for making you go through all that pain, it was selfish of me, knowing how much you cared for me.. And...\"]\n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"I'm grateful that I met you. I love you so much.\"]\n\nUpon hearing that, I raised my head real fast- \n\n<img src = \"https://raw.githubusercontent.com/beweiseflugal/PollyFiles/main/Ephemeral/cgfour.png\">\n\nOnly to see him gone.\n...\n..\n.\n\nHe's gone. [[Again|villagersEnd]]. Jurius is gone. He will be forever gone and I have nothing but painful memories to treasure of him.\n\n",
+      "links": [
+        {
+          "name": "Again|villagersEnd",
+          "link": "Again|villagersEnd",
+          "broken": true
+        }
+      ],
+      "name": "villagers4",
+      "pid": "22",
+      "position": {
+        "x": "750",
+        "y": "1975"
+      }
+    },
+    {
+      "text": "(align:\"<==\")+(box:\"=XX=\")[=\n''ENDING 3:'' (text-style:\"underline\")[His last words]\n\nJurius was a mere illusion you created. He was already gone a long time ago.\n\nAll this time, you were talking to a ghost, a shard of him left. \nWith your heart shattered. you watched the sunset alone.\nAnd maybe that's what happened. Allister lost himself when Jurius left.\n\n... In that ephemeral moment, you never recovered your soul.\n\n>> [[End.|Start]]\n",
+      "links": [
+        {
+          "name": "End.|Start",
+          "link": "End.|Start",
+          "broken": true
+        }
+      ],
+      "name": "villagersEnd",
+      "pid": "23",
+      "position": {
+        "x": "750",
+        "y": "2100"
+      }
+    },
+    {
+      "text": "My mind kept replaying images of that day. The dark sky looming over us. The strong stench of blood. Piles of corpses hugging the ground.The sight was engrained in my mind, and I only felt despair, and contempt towards myself. Could I have avoided it, had I been strong enough? Was it even humane of me to let that many people to die, just to save one person important to me? What if I didn't save Jurius-\n\n//I slapped myself for even having that thought cross my mind.//\n\nI can't think like that. Jurius held much more importance to me than those villagers. Yet, seeing those bodies, and even the despair and disappointment on Jurius's face. I shouldn't blame him for my powerlessness. I even promised him that we would free his village. Together.\n\nAnd i failed at that. I'm a sorry excuse of a [[friend|jurius3]].\n\n",
+      "links": [
+        {
+          "name": "friend|jurius3",
+          "link": "friend|jurius3",
+          "broken": true
+        }
+      ],
+      "name": "jurius2",
+      "pid": "24",
+      "position": {
+        "x": "500",
+        "y": "1725"
+      }
+    },
+    {
+      "text": "I looked at my side, and started to talk slowly. \n\n(bg:#2b8a3e)[//Allister//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"I knew my actions hurt you a lot, and I could never apologize enough.\"]\n\nI never realized before how much I hurt him.\n\nJurius stood there, staring at me.\n\nHe then spoke up.\n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"It wasn't your fault. I knew, deep down, that you'd keep me safe. \"]\n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"And in the back of my head, I couldn't stop blaming you.\"]\n\nThose words of him hurt me more than I expected.\n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"I resented you for years now, even though I knew it wasn't your fault-\"]\n\n(bg:#2b8a3e)[//Allister//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"You don't have to say that. I knew it was my fault. I was selfish-\"]\n\nHe covered my mouth.\n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"It's okay, I already accepted what happened.\"]\n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"... In fact, maybe I should thank you for saving me, because I'm still alive.\"]\n\nJurius turned his back on me, then offered his hand.\n\n(bg:#868e96)[//Jurius//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"If you're okay with me, I still wanted to make our dream come true.\"]\n\nI teared up as I grabbed his hand.\n\n(bg:#2b8a3e)[//Allister//]\n(bg:(hsl:210,0.1667,0.9765,0.3))[\"... Gladly.\"]\n\nWe then watched the sunset, [[together|juriusend]]. Knowing that all is good.",
+      "links": [
+        {
+          "name": "together|juriusend",
+          "link": "together|juriusend",
+          "broken": true
+        }
+      ],
+      "name": "jurius3",
+      "pid": "25",
+      "position": {
+        "x": "500",
+        "y": "1850"
+      }
+    },
+    {
+      "text": "(align:\"<==\")+(box:\"=XX=\")[=\n''ENDING 2:'' (text-style:\"underline\")[Together again]\n\nJurius has forgiven you. With him by your side, you felt your soul back into your body.\n\nNow you forge your path together again, as a duo.\n\n>> [[End.|Start]]",
+      "links": [
+        {
+          "name": "End.|Start",
+          "link": "End.|Start",
+          "broken": true
+        }
+      ],
+      "name": "juriusend",
+      "pid": "26",
+      "position": {
+        "x": "500",
+        "y": "2100"
+      }
+    }
+  ],
+  "name": "Ephemeral",
+  "startnode": "1",
+  "creator": "Twine",
+  "creator-version": "2.7.1",
+  "ifid": "D559C1F0-5B16-425B-821F-6F4DFBF47F1A"
+}
