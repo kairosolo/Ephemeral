@@ -8,21 +8,17 @@ public class MusicManager : MonoBehaviour
     [SerializeField] AudioSource audioSource;
     [SerializeField] AudioClip[] audioClips;
 
-    public float fadeDuration = 1.0f; // Duration of the fade in seconds
-    public bool startFadedOut = false; // Start with the audio faded out
+    [SerializeField] float fadeDuration = 1.0f;
+    [SerializeField] bool startFadedOut = false;
     bool fading = false;
 
-    private float targetVolume;
-    private float currentVolume = 0.0f;
-    private void Awake()
-    {
-
-        Lua.RegisterFunction(nameof(MusicFadeIn), this, SymbolExtensions.GetMethodInfo(() => MusicFadeIn(1, 0, 0)));
-        Lua.RegisterFunction(nameof(MusicFadeOut), this, SymbolExtensions.GetMethodInfo(() => MusicFadeOut(1)));
-    }
+    [SerializeField] int savedMusic;
+    float targetVolume;
+    float currentVolume = 0.0f;
     void OnEnable()
     {
-
+        Lua.RegisterFunction(nameof(MusicFadeIn), this, SymbolExtensions.GetMethodInfo(() => MusicFadeIn(1, 0, 0)));
+        Lua.RegisterFunction(nameof(MusicFadeOut), this, SymbolExtensions.GetMethodInfo(() => MusicFadeOut(1)));
     }
     void OnDisable()
     {
@@ -45,8 +41,29 @@ public class MusicManager : MonoBehaviour
             fading = false;
         }
     }
+    public void SetSavedMusic()
+    {
+        StartCoroutine(SetSavedMusicDelay());
+    }
+    IEnumerator SetSavedMusicDelay()
+    {
+        yield return new WaitForSeconds(.1f);
+        savedMusic = DialogueLua.GetVariable("Music").AsInt;
+        audioSource.clip = audioClips[savedMusic];
+        audioSource.volume = 1;
+        if (savedMusic == 0)
+        {
+            audioSource.Stop();
+        }
+        else
+        {
+            audioSource.Play();
+        }
+    }
     public void MusicFadeIn(float targetVolume, float fadeDuration = 1f, double clipNum = 0)
     {
+        DialogueLua.SetVariable("Music", clipNum);
+
         this.targetVolume = targetVolume;
         currentVolume = audioSource.volume;
         audioSource.volume = currentVolume;

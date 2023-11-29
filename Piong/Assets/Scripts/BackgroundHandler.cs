@@ -28,7 +28,7 @@ public class BackgroundHandler : MonoBehaviour
         savedBackground = DialogueLua.GetVariable("Background").AsInt;
         background.sprite = backgrounds[savedBackground];
 
-        if (backgrounds[savedBackground] == null)
+        if (savedBackground == 0)
         {
             background.enabled = false;
         }
@@ -36,7 +36,6 @@ public class BackgroundHandler : MonoBehaviour
         {
             background.enabled = true;
         }
-        Debug.Log(savedBackground);
     }
     public void ResetBackground()
     {
@@ -50,7 +49,8 @@ public class BackgroundHandler : MonoBehaviour
     IEnumerator SetBackgroundCor(double num)
     {
         yield return new WaitForSecondsRealtime(1);
-        if(backgrounds[(int)num] == null)
+        DialogueLua.SetVariable("Background", num);
+        if (backgrounds[(int)num] == null)
         {
             background.sprite = null;
             background.enabled = false;

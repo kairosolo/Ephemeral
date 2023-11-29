@@ -6,7 +6,6 @@ namespace PixelCrushers.DialogueSystem.VisualNovelFramework
 {
 	
 	public class Menus : MonoBehaviour {
-
         public bool isStartScene = true;
 
         public GameObject gameplayPanel;

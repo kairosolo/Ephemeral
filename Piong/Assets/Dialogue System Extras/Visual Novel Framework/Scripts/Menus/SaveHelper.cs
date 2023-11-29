@@ -15,7 +15,8 @@ namespace PixelCrushers.DialogueSystem.VisualNovelFramework
 	public class SaveHelper : MonoBehaviour {
 
 		[SerializeField] BackgroundHandler backgroundHandler;
-		[SerializeField] int savedBackground;
+		[SerializeField] ActorManager actorManager;
+		[SerializeField] MusicManager musicManager;
         [ConversationPopup(true)]
         public string conversation = "Start Conversation";
 
@@ -137,6 +138,8 @@ namespace PixelCrushers.DialogueSystem.VisualNovelFramework
 			SceneManager.LoadScene("LoadingScene");
 			SaveSystem.LoadFromSlot(slotNum);
 			backgroundHandler.SetSavedBackground();
+			actorManager.SetSavedActors();
+			musicManager.SetSavedMusic();
 		}
 		public virtual void LoadLastSavedGame()
 		{
@@ -183,6 +186,7 @@ namespace PixelCrushers.DialogueSystem.VisualNovelFramework
 		void ResetGame()
         {
 			backgroundHandler.ResetBackground();
+			actorManager.ResetActors();
         }
     }
 

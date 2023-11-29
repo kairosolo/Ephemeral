@@ -1735,7 +1735,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 180448717}
-  - component: {fileID: 180448716}
   - component: {fileID: 180448718}
   m_Layer: 0
   m_Name: MusicManager
@@ -1744,22 +1743,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &180448716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 180448715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b84d1a67504970045aa57e6190e517fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
-  audioClips: []
-  fadeDuration: 1
-  startFadedOut: 0
 --- !u!4 &180448717
 Transform:
   m_ObjectHideFlags: 0
@@ -1789,7 +1772,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2067,8 +2050,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Fusce tempus justo quis nibh pharetra, ut rutrum mauris tempus.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 82f1c5f4e83f98b42ad3a01d7c54f651, type: 2}
+  m_sharedMaterial: {fileID: -3623446424618237785, guid: 82f1c5f4e83f98b42ad3a01d7c54f651, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3217,7 +3200,7 @@ GameObject:
   - component: {fileID: 288368350}
   - component: {fileID: 288368354}
   - component: {fileID: 288368353}
-  - component: {fileID: 288368351}
+  - component: {fileID: 288368357}
   m_Layer: 5
   m_Name: Narrator Continue Button
   m_TagString: Untagged
@@ -3268,37 +3251,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 288368352}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 288368351}
-        m_TargetAssemblyTypeName: PixelCrushers.DialogueSystem.StandardUIContinueButtonFastForward,
-          Assembly-CSharp-firstpass
-        m_MethodName: OnFastForward
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &288368351
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 288368349}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73ee3d99442035942b6dd1ede25ff7cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueUI: {fileID: 698200437}
-  typewriterEffect: {fileID: 1395105990}
-  hideContinueButtonOnContinue: 0
-  continueSubtitlePanel: 1
-  continueAlertPanel: 1
+      m_Calls: []
 --- !u!114 &288368352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3402,6 +3355,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &288368357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288368349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73ee3d99442035942b6dd1ede25ff7cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueUI: {fileID: 698200437}
+  typewriterEffect: {fileID: 1395105990}
+  hideContinueButtonOnContinue: 0
+  continueSubtitlePanel: 1
+  continueAlertPanel: 1
 --- !u!1 &288563084
 GameObject:
   m_ObjectHideFlags: 0
@@ -6429,8 +6399,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1207399572}
-  - {fileID: 1100379522}
   - {fileID: 288563085}
+  - {fileID: 1100379522}
   - {fileID: 257753797}
   - {fileID: 209482027}
   - {fileID: 1690430767}
@@ -6658,6 +6628,7 @@ GameObject:
   - component: {fileID: 548611622}
   - component: {fileID: 548611623}
   - component: {fileID: 548611620}
+  - component: {fileID: 548611624}
   m_Layer: 5
   m_Name: TitleText
   m_TagString: Untagged
@@ -6696,9 +6667,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7de41b4a04bc3284e8796e536bc4acbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_textTable: {fileID: 0}
+  m_textTable: {fileID: 11400000, guid: 9fd11e253feb3cb48b0937d6ee1ae00a, type: 2}
   m_localizedFonts: {fileID: 0}
-  m_fieldName: 
+  m_fieldName: GAME TITLE
 --- !u!222 &548611622
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6729,8 +6700,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Ephemeral
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: acada46e034f646479c2fa6dd80704ba, type: 2}
+  m_sharedMaterial: {fileID: 6667843338957385542, guid: acada46e034f646479c2fa6dd80704ba, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6754,8 +6725,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
-  m_fontSizeBase: 72
+  m_fontSize: 100
+  m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -6770,7 +6741,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -6796,6 +6767,22 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &548611624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548611618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7cfa58e417a46ea8889989684c2522e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AngleMultiplier: 0
+  SpeedMultiplier: 0
+  ScaleMultiplier: 0
+  RotationMultiplier: 0
 --- !u!1 &552485240
 GameObject:
   m_ObjectHideFlags: 0
@@ -7165,6 +7152,19 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 92510773}
         m_TargetAssemblyTypeName: 
+        m_MethodName: SelectSlot
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 92510773}
+        m_TargetAssemblyTypeName: PixelCrushers.DialogueSystem.VisualNovelFramework.LoadGamePanel,
+          Assembly-CSharp
         m_MethodName: SelectSlot
         m_Mode: 3
         m_Arguments:
@@ -8229,7 +8229,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1656514748}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1736097861}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -11871,6 +11871,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 92510773}
+        m_TargetAssemblyTypeName: PixelCrushers.DialogueSystem.VisualNovelFramework.LoadGamePanel,
+          Assembly-CSharp
+        m_MethodName: SelectSlot
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &955507576
 GameObject:
   m_ObjectHideFlags: 0
@@ -12141,6 +12154,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 92510773}
+        m_TargetAssemblyTypeName: PixelCrushers.DialogueSystem.VisualNovelFramework.LoadGamePanel,
+          Assembly-CSharp
+        m_MethodName: SelectSlot
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &972875226
 GameObject:
   m_ObjectHideFlags: 0
@@ -12381,6 +12407,155 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 973943921}
   m_CullTransparentMesh: 0
+--- !u!1 &998856318
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 998856319}
+  - component: {fileID: 998856321}
+  - component: {fileID: 998856320}
+  m_Layer: 0
+  m_Name: MusicManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &998856319
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998856318}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1736097861}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &998856320
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998856318}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 0
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &998856321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998856318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b84d1a67504970045aa57e6190e517fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 998856320}
+  audioClips:
+  - {fileID: 0}
+  - {fileID: 8300000, guid: 1afa461ff30682b4ea1d5b3ebe8f004f, type: 3}
+  - {fileID: 8300000, guid: 67be78f9e974b16489fdc519789306de, type: 3}
+  fadeDuration: 1
+  startFadedOut: 0
+  savedMusic: 0
 --- !u!1 &1008471021
 GameObject:
   m_ObjectHideFlags: 0
@@ -13129,10 +13304,14 @@ MonoBehaviour:
   pcImage: {fileID: 288563088}
   npcImage: {fileID: 1100379525}
   pcSprites:
+  - {fileID: 0}
   - {fileID: 21300000, guid: 9d86bf2c121ea954bb34489ee84052b5, type: 3}
   npcSprites:
+  - {fileID: 0}
   - {fileID: 21300000, guid: c967d92c9b0782f459ca88890ce8e303, type: 3}
   - {fileID: 21300000, guid: 377b1a8cb59252044baa2baf0fc87bdf, type: 3}
+  savedPCImage: 0
+  savedNPCImage: 0
 --- !u!1 &1100379521
 GameObject:
   m_ObjectHideFlags: 0
@@ -13295,8 +13474,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Fusce tempus justo quis nibh pharetra, ut rutrum mauris tempus.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: acada46e034f646479c2fa6dd80704ba, type: 2}
+  m_sharedMaterial: {fileID: 6667843338957385542, guid: acada46e034f646479c2fa6dd80704ba, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -15247,7 +15426,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backgroundHandler: {fileID: 552485242}
-  savedBackground: 0
+  actorManager: {fileID: 1095244040}
+  musicManager: {fileID: 998856321}
   conversation: Ephemeral
   emptySlotText: -empty-
   slotText: Slot
@@ -16131,6 +16311,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 92510773}
+        m_TargetAssemblyTypeName: PixelCrushers.DialogueSystem.VisualNovelFramework.LoadGamePanel,
+          Assembly-CSharp
+        m_MethodName: SelectSlot
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1386793340
 GameObject:
   m_ObjectHideFlags: 0
@@ -16583,8 +16776,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Fusce tempus justo quis nibh pharetra, ut rutrum mauris tempus.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0905b44d9d2c70f4798f81a4a0984ba5, type: 2}
+  m_sharedMaterial: {fileID: -3623446424618237785, guid: 0905b44d9d2c70f4798f81a4a0984ba5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -20310,8 +20503,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 679387122}
   - {fileID: 552485241}
   - {fileID: 1095244039}
+  - {fileID: 998856319}
   - {fileID: 465502273}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -21046,6 +21241,19 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 92510773}
         m_TargetAssemblyTypeName: 
+        m_MethodName: SelectSlot
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 92510773}
+        m_TargetAssemblyTypeName: PixelCrushers.DialogueSystem.VisualNovelFramework.LoadGamePanel,
+          Assembly-CSharp
         m_MethodName: SelectSlot
         m_Mode: 3
         m_Arguments:
@@ -21882,7 +22090,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7de41b4a04bc3284e8796e536bc4acbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_textTable: {fileID: 0}
+  m_textTable: {fileID: 11400000, guid: 9fd11e253feb3cb48b0937d6ee1ae00a, type: 2}
   m_localizedFonts: {fileID: 0}
   m_fieldName: 
 --- !u!114 &1923754250
@@ -22065,8 +22273,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Fusce tempus justo quis nibh pharetra, ut rutrum mauris tempus.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: acada46e034f646479c2fa6dd80704ba, type: 2}
+  m_sharedMaterial: {fileID: 6667843338957385542, guid: acada46e034f646479c2fa6dd80704ba, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -24748,6 +24956,5 @@ SceneRoots:
   - {fileID: 882574868}
   - {fileID: 180448717}
   - {fileID: 1266643876}
-  - {fileID: 679387122}
   - {fileID: 1298466157}
   - {fileID: 1736097861}

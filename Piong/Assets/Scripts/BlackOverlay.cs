@@ -15,18 +15,12 @@ public class BlackOverlay : MonoBehaviour
     bool fadeIn = false;
     bool fading = false;
 
-
-    private void Awake()
-    {
-   
-        Lua.RegisterFunction(nameof(FadeIn), this, SymbolExtensions.GetMethodInfo(() => FadeIn(0f)));
-        Lua.RegisterFunction(nameof(FadeSet), this, SymbolExtensions.GetMethodInfo(() => FadeSet(0f, 0f)));
-        Lua.RegisterFunction(nameof(FadeOut), this, SymbolExtensions.GetMethodInfo(() => FadeOut(0f)));
-    }
     void OnEnable()
     {
 
-
+        Lua.RegisterFunction(nameof(FadeIn), this, SymbolExtensions.GetMethodInfo(() => FadeIn(0f)));
+        Lua.RegisterFunction(nameof(FadeSet), this, SymbolExtensions.GetMethodInfo(() => FadeSet(0f, 0f)));
+        Lua.RegisterFunction(nameof(FadeOut), this, SymbolExtensions.GetMethodInfo(() => FadeOut(0f)));
     }
     void OnDisable()
     {

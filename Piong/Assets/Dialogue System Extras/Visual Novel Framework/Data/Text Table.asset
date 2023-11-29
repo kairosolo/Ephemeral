@@ -56,7 +56,7 @@ MonoBehaviour:
   - m_fieldName: GAME TITLE
     m_keys: 00000000
     m_values:
-    - GAME TITLE
+    - Ephemeral
   - m_fieldName: Load
     m_keys: 00000000
     m_values:
@@ -154,4 +154,4 @@ MonoBehaviour:
     m_values:
     - Are you sure you want to delete the game in this slot?
   m_nextLanguageID: 1
-  m_nextFieldID: 35
+  m_nextFieldID: 36
