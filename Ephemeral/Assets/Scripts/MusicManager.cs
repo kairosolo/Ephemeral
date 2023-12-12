@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using PixelCrushers.DialogueSystem;
+using UnityEngine.SceneManagement;
 
 public class MusicManager : MonoBehaviour
 {
@@ -16,45 +17,28 @@ public class MusicManager : MonoBehaviour
     [SerializeField] private int savedMusicVolume;
     private float targetVolume;
     private float currentVolume = 0.0f;
-    private bool saveLoaded = false;
-    private bool luaSet = false;
 
-    private void OnEnable()
+    protected virtual void OnEnable()
     {
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     private void OnDisable()
     {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+
         Lua.UnregisterFunction(nameof(MusicFadeIn));
         Lua.UnregisterFunction(nameof(MusicFadeOut));
     }
 
+    public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Lua.RegisterFunction(nameof(MusicFadeIn), this, SymbolExtensions.GetMethodInfo(() => MusicFadeIn(1, 0, 0)));
+        Lua.RegisterFunction(nameof(MusicFadeOut), this, SymbolExtensions.GetMethodInfo(() => MusicFadeOut(1)));
+    }
+
     private void Update()
     {
-        if (luaSet == false && DialogueManager.isConversationActive)
-        {
-            luaSet = true;
-            Lua.RegisterFunction(nameof(MusicFadeIn), this, SymbolExtensions.GetMethodInfo(() => MusicFadeIn(1, 0, 0)));
-            Lua.RegisterFunction(nameof(MusicFadeOut), this, SymbolExtensions.GetMethodInfo(() => MusicFadeOut(1)));
-        }
-
-        if (saveLoaded == false && DialogueManager.isConversationActive)
-        {
-            saveLoaded = true;
-            savedMusic = DialogueLua.GetVariable("Music").AsInt;
-            audioSource.volume = DialogueLua.GetVariable("MusicVolume").asFloat;
-
-            if (savedMusic == 0)
-            {
-                audioSource.Stop();
-            }
-            else
-            {
-                audioSource.clip = audioClips[savedMusic];
-                audioSource.Play();
-            }
-        }
-
         if (!fading) return;
 
         float volumeChangeRate = 1.0f / fadeDuration;
@@ -72,7 +56,18 @@ public class MusicManager : MonoBehaviour
 
     public void LoadSavedMusic()
     {
-        saveLoaded = false;
+        savedMusic = DialogueLua.GetVariable("Music").AsInt;
+        audioSource.volume = DialogueLua.GetVariable("MusicVolume").asFloat;
+
+        if (savedMusic == 0)
+        {
+            audioSource.Stop();
+        }
+        else
+        {
+            audioSource.clip = audioClips[savedMusic];
+            audioSource.Play();
+        }
     }
 
     public void MusicFadeIn(float targetVolume, float fadeDuration = 1f, double clipNum = 0)
@@ -98,10 +93,5 @@ public class MusicManager : MonoBehaviour
         currentVolume = audioSource.volume;
         fading = true;
         this.fadeDuration = fadeDuration;
-    }
-
-    public void ResetMusic()
-    {
-        luaSet = false;
     }
 }

@@ -3,60 +3,59 @@ using System.Collections.Generic;
 using UnityEngine;
 using PixelCrushers.DialogueSystem;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class BackgroundHandler : MonoBehaviour
 {
-    [SerializeField] Image background;
-    [SerializeField] Sprite[] backgrounds;
-    [SerializeField] int savedBackground;
-    bool saveLoaded = false;
-    bool luaSet = false;
-    void OnDisable()
+    [SerializeField] private Image background;
+    [SerializeField] private Sprite[] backgrounds;
+    [SerializeField] private int savedBackground;
+
+    protected virtual void OnEnable()
     {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
         Lua.UnregisterFunction(nameof(SetBackground));
     }
-    private void Update()
+
+    public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if(luaSet == false && DialogueManager.isConversationActive)
-        {
-            luaSet = true;
-            Lua.RegisterFunction(nameof(SetBackground), this, SymbolExtensions.GetMethodInfo(() => SetBackground(0)));
-        }
-
-        if (saveLoaded == false && DialogueManager.isConversationActive)
-        {
-            saveLoaded = true;
-            savedBackground = DialogueLua.GetVariable("Background").AsInt;
-
-            if (savedBackground == 0)
-            {
-                background.enabled = false;
-            }
-            else
-            {
-                background.sprite = backgrounds[savedBackground];
-                background.enabled = true;
-            }
-
-        }
+        Lua.RegisterFunction(nameof(SetBackground), this, SymbolExtensions.GetMethodInfo(() => SetBackground(0)));
     }
+
     public void LoadSavedBackground()
     {
-        saveLoaded = false;
+        savedBackground = DialogueLua.GetVariable("Background").AsInt;
+
+        if (savedBackground == 0)
+        {
+            background.enabled = false;
+        }
+        else
+        {
+            background.sprite = backgrounds[savedBackground];
+            background.enabled = true;
+        }
     }
+
     public void ResetBackground()
     {
-        luaSet = false;
         background.sprite = backgrounds[0];
         background.enabled = false;
     }
+
     public void SetBackground(double num)
     {
-        StartCoroutine(SetBackgroundCor(num));
+        if (!DialogueSkipper.isEndSkip) { SetBackgroundVanilla(num); }
+        else { StartCoroutine(SetBackgroundCor(num)); }
     }
-    IEnumerator SetBackgroundCor(double num)
+
+    public void SetBackgroundVanilla(double num)
     {
-        yield return new WaitForSecondsRealtime(1);
         DialogueLua.SetVariable("Background", num);
         if (backgrounds[(int)num] == null)
         {
@@ -68,6 +67,11 @@ public class BackgroundHandler : MonoBehaviour
             background.enabled = true;
             background.sprite = backgrounds[(int)num];
         }
+    }
 
+    private IEnumerator SetBackgroundCor(double num)
+    {
+        yield return new WaitForSecondsRealtime(1);
+        SetBackgroundVanilla(num);
     }
 }

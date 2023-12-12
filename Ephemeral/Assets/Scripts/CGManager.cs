@@ -3,6 +3,7 @@ using PixelCrushers.DialogueSystem;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CGManager : MonoBehaviour
 {
@@ -11,58 +12,60 @@ public class CGManager : MonoBehaviour
     public List<Sprite> cgList;
     [SerializeField] private int savedCG;
     private bool saveLoaded = false;
-    private bool luaSet = false;
+
+    protected virtual void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
     private void OnDisable()
     {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
         Lua.UnregisterFunction(nameof(SetCG));
+    }
+
+    public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Lua.RegisterFunction(nameof(SetCG), this, SymbolExtensions.GetMethodInfo(() => SetCG(0)));
     }
 
     private void Update()
     {
         DeleteTestSaveCGGallery();
-        if (luaSet == false && DialogueManager.isConversationActive)
-        {
-            luaSet = true;
-            Lua.RegisterFunction(nameof(SetCG), this, SymbolExtensions.GetMethodInfo(() => SetCG(0)));
-        }
-        if (saveLoaded == false && DialogueManager.isConversationActive)
-        {
-            saveLoaded = true;
-
-            savedCG = DialogueLua.GetVariable("CG").AsInt;
-
-            if (savedCG == 0)
-            {
-                cg.enabled = false;
-            }
-            else
-            {
-                cg.sprite = cgList[savedCG];
-                cg.enabled = true;
-            }
-        }
     }
 
     public void LoadSavedCG()
     {
-        saveLoaded = false;
+        savedCG = DialogueLua.GetVariable("CG").AsInt;
+
+        if (savedCG == 0)
+        {
+            cg.enabled = false;
+        }
+        else
+        {
+            cg.sprite = cgList[savedCG];
+            cg.enabled = true;
+        }
     }
 
     public void ResetCG()
     {
-        luaSet = false;
         cg.sprite = cgList[0];
         cg.enabled = false;
     }
 
     public void SetCG(double num)
     {
-        StartCoroutine(SetCGCor(num));
+        if (!DialogueSkipper.isEndSkip)
+        {
+            SetCGVanilla(num);
+        }
+        else { StartCoroutine(SetCGCor(num)); }
     }
 
-    private IEnumerator SetCGCor(double num)
+    public void SetCGVanilla(double num)
     {
-        yield return new WaitForSecondsRealtime(1);
         DialogueLua.SetVariable("CG", num);
         if (cgList[(int)num] == null)
         {
@@ -76,11 +79,19 @@ public class CGManager : MonoBehaviour
             SaveCGGallery((int)num);
         }
     }
+
+    private IEnumerator SetCGCor(double num)
+    {
+        yield return new WaitForSecondsRealtime(1);
+        SetCGVanilla(num);
+    }
+
     public void SaveCGGallery(int cgNum)
     {
         galleryManager.AddSavedCG(cgNum);
     }
 
+    //Delete Later
     public void DeleteTestSaveCGGallery()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))

@@ -18,6 +18,7 @@ namespace PixelCrushers.DialogueSystem.VisualNovelFramework
         [SerializeField] private ActorManager actorManager;
         [SerializeField] private MusicManager musicManager;
         [SerializeField] private CGManager cgManager;
+        [SerializeField] private HistoryManager historyManager;
 
         [ConversationPopup(true)]
         public string conversation = "Start Conversation";
@@ -131,6 +132,7 @@ namespace PixelCrushers.DialogueSystem.VisualNovelFramework
 
         public virtual void SaveGame(int slotNum)
         {
+            historyManager.SaveHistory();
             SaveSystem.SaveToSlot(slotNum);
             PlayerPrefs.SetString(GetSlotSummaryKey(slotNum), GetCurrentSummary(slotNum));
             PlayerPrefs.SetString(GetSlotDetailsKey(slotNum), GetCurrentDetails(slotNum));
@@ -139,15 +141,19 @@ namespace PixelCrushers.DialogueSystem.VisualNovelFramework
 
         public virtual void LoadGame(int slotNum)
         {
-            blackOverlay.FadeSet(.5f, 1, 1);
+            blackOverlay.FadeSetVanilla(.5f, 1, 1);
 
             SceneManager.LoadScene("LoadingScene");
             SaveSystem.LoadFromSlot(slotNum);
+        }
 
+        public void LoadSaves()
+        {
             backgroundHandler.LoadSavedBackground();
             actorManager.LoadSavedActors();
             musicManager.LoadSavedMusic();
             cgManager.LoadSavedCG();
+            historyManager.LoadSavedHistory();
         }
 
         public virtual void LoadLastSavedGame()
@@ -166,7 +172,7 @@ namespace PixelCrushers.DialogueSystem.VisualNovelFramework
         public virtual void RestartGame()
         {
             ResetGame();
-            blackOverlay.FadeSet(.5f, .5f, 1);
+            blackOverlay.FadeSetVanilla(.5f, .5f, 1);
             StartCoroutine(RestartGameDelay());
         }
 
@@ -174,6 +180,8 @@ namespace PixelCrushers.DialogueSystem.VisualNovelFramework
         {
             yield return new WaitForSeconds(1f);
             //SaveSystem.RestartGame(firstGameplaySceneName);
+            m_startConversationAfterLoadingScene = true;
+            SceneManager.LoadScene("LoadingScene");
             Tools.LoadLevel(firstGameplaySceneName);
 #if USE_INK
             DialogueManager.AddDatabase(FindObjectOfType<PixelCrushers.DialogueSystem.InkSupport.DialogueSystemInkIntegration>().database);
@@ -193,7 +201,7 @@ namespace PixelCrushers.DialogueSystem.VisualNovelFramework
         public virtual void ReturnToMenu()
         {
             musicManager.MusicFadeOut(.5f);
-            blackOverlay.FadeSet(.5f, .5f, 1);
+            blackOverlay.FadeSetVanilla(.5f, .5f, 1);
             DialogueManager.StopConversation();
             DialogueManager.ResetDatabase(DatabaseResetOptions.RevertToDefault);
             StartCoroutine(ReturnToMenuDelay());
@@ -209,11 +217,11 @@ namespace PixelCrushers.DialogueSystem.VisualNovelFramework
 
         private void ResetGame()
         {
+            DialogueSkipper.isEndSkip = false;
             backgroundHandler.ResetBackground();
             actorManager.ResetActors();
             cgManager.ResetCG();
-            musicManager.ResetMusic();
-            blackOverlay.ResetBlackOverlay();
+            historyManager.ResetHistory();
         }
     }
 }

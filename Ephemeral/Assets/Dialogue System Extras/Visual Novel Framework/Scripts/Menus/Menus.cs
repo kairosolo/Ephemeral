@@ -4,20 +4,21 @@ using PixelCrushers.DialogueSystem;
 
 namespace PixelCrushers.DialogueSystem.VisualNovelFramework
 {
-	
-	public class Menus : MonoBehaviour {
+    public class Menus : MonoBehaviour
+    {
         public bool isStartScene = true;
 
         public GameObject gameplayPanel;
         public GeneralPanel startPanel;
-		public LoadGamePanel loadGamePanel;
-		public SaveGamePanel saveGamePanel;
+        public LoadGamePanel loadGamePanel;
+        public SaveGamePanel saveGamePanel;
         public OptionsPanel optionsPanel;
-		public GeneralPanel quitToMenuPanel;
-		public QuitProgramPanel quitProgramPanel;
+        public GeneralPanel quitToMenuPanel;
+        public QuitProgramPanel quitProgramPanel;
         public AchievementsPanel achievementsPanel;
         public GeneralPanel creditsPanel;
         public GalleryManager galleryManager;
+        public HistoryManager historyManager;
         public string creditsScene = "Credits";
 
         [Tooltip("When the conversation ends, return to main menu (unless conversation was cancelled by CancelConversation method).")]
@@ -27,7 +28,8 @@ namespace PixelCrushers.DialogueSystem.VisualNovelFramework
 
         private static Menus m_instance = null;
 
-        public static Menus instance { get { return m_instance; } }
+        public static Menus instance
+        { get { return m_instance; } }
 
         private void Awake() // Singleton.
         {
@@ -49,35 +51,35 @@ namespace PixelCrushers.DialogueSystem.VisualNovelFramework
             }
         }
 
-		public void HideAllPanels()
-		{
+        public void HideAllPanels()
+        {
             startPanel.Close();
-			loadGamePanel.Close();
-			saveGamePanel.Close();
-			quitToMenuPanel.Close();
-			quitProgramPanel.Close();
+            loadGamePanel.Close();
+            saveGamePanel.Close();
+            quitToMenuPanel.Close();
+            quitProgramPanel.Close();
             galleryManager.Close();
-		}
+        }
 
-		public void ShowLoadGamePanel()
-		{
-			loadGamePanel.Open();
-		}
+        public void ShowLoadGamePanel()
+        {
+            loadGamePanel.Open();
+        }
 
-		public void HideLoadGamePanel()
-		{
-			loadGamePanel.Close();
-		}
+        public void HideLoadGamePanel()
+        {
+            loadGamePanel.Close();
+        }
 
-		public void ShowSaveGamePanel()
-		{
-			saveGamePanel.Open();
-		}
+        public void ShowSaveGamePanel()
+        {
+            saveGamePanel.Open();
+        }
 
-		public void HideSaveGamePanel()
-		{
-			saveGamePanel.Close();
-		}
+        public void HideSaveGamePanel()
+        {
+            saveGamePanel.Close();
+        }
 
         public void ShowOptionsPanel()
         {
@@ -90,24 +92,25 @@ namespace PixelCrushers.DialogueSystem.VisualNovelFramework
         }
 
         public void ShowQuitToMenuPanel()
-		{
-			quitToMenuPanel.Open();
-		}
+        {
+            quitToMenuPanel.Open();
+        }
 
-		public void HideQuitToMenuPanel()
-		{
-			quitToMenuPanel.Close();
-		}
+        public void HideQuitToMenuPanel()
+        {
+            quitToMenuPanel.Close();
+        }
 
-		public void ShowQuitProgramPanel()
-		{
-			quitProgramPanel.Open();
-		}
-		
-		public void HideQuitProgramPanel()
-		{
-			quitProgramPanel.Close();
-		}
+        public void ShowQuitProgramPanel()
+        {
+            quitProgramPanel.Open();
+        }
+
+        public void HideQuitProgramPanel()
+        {
+            quitProgramPanel.Close();
+        }
+
         public void ShowGalleryPanel()
         {
             galleryManager.Open();
@@ -117,15 +120,24 @@ namespace PixelCrushers.DialogueSystem.VisualNovelFramework
         {
             galleryManager.Close();
         }
+
+        public void ShowHistoryPanel()
+        {
+            historyManager.Open();
+        }
+
+        public void HideHistoryPanel()
+        {
+            historyManager.Close();
+        }
+
         public void ShowCredits()
         {
-            Tools.LoadLevel(creditsScene);
             creditsPanel.Open();
         }
 
         public void HideCredits()
         {
-            Tools.LoadLevel(GetComponent<SaveHelper>().mainMenuScene);
             creditsPanel.Close();
         }
 
@@ -164,7 +176,5 @@ namespace PixelCrushers.DialogueSystem.VisualNovelFramework
             m_monitorConversation = false;
             if (DialogueManager.IsConversationActive) DialogueManager.StopConversation();
         }
-
-	}
-
+    }
 }

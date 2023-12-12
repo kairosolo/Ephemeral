@@ -82,14 +82,6 @@ public class GalleryManager : MonoBehaviour
         reader = QuickSaveReader.Create("Gallery");
     }
 
-    public void LoadGallery(List<MyType> SavedCGs)
-    {
-        foreach (var item in SavedCGs)
-        {
-            Debug.Log(cgList[item.savedcgs]);
-        }
-    }
-
     public List<MyType> SavedCgs = new List<MyType>();
 
     [System.Serializable]

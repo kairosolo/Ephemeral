@@ -209,7 +209,7 @@ MonoBehaviour:
       type: 1
       typeString: CustomFieldType_Number
     - title: Description
-      value: 
+      value: Music Volume
       type: 0
       typeString: CustomFieldType_Text
   - id: 5
@@ -224,6 +224,20 @@ MonoBehaviour:
       typeString: CustomFieldType_Number
     - title: Description
       value: CG Number
+      type: 0
+      typeString: CustomFieldType_Text
+  - id: 7
+    fields:
+    - title: Name
+      value: History
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Initial Value
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Description
+      value: History Text
       type: 0
       typeString: CustomFieldType_Text
   conversations:
@@ -363,7 +377,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 1
+        value: 3
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -481,9 +495,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 'ShowNPC(2);
-
-        SetCG(1)'
+      userScript: ShowNPC(2);
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -520,7 +532,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: '[panel=2] I turned out and was surprised by what I saw.'
+        value: '[panel=2]I turned out and was surprised by what I saw.'
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -635,78 +647,6 @@ MonoBehaviour:
         y: 1222.6145
         width: 160
         height: 30
-    - id: 13
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Description
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Actor
-        value: 3
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 3
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Dialogue Text
-        value: "[panel=2]A small garden-like place near the borders of Filenore and
-          Everwatch.\r"
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: CustomFieldType_Files
-      - title: Video File
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      conversationID: 1
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 1
-        originDialogueID: 13
-        destinationConversationID: 1
-        destinationDialogueID: 14
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: MusicFadeIn(1, 1, 2)
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 329.75336
-        y: 552.5035
-        width: 160
-        height: 30
     - id: 14
       fields:
       - title: Title
@@ -734,8 +674,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "[panel=2] A place where I feel solitude.  there\u2019d be a hint
-          of bitterness beneath it."
+        value: "[panel=2]A place where I feel solitude.  there\u2019d be a hint of
+          bitterness beneath it."
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -806,7 +746,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: '[panel=2] I travel around the world as a famous alchemist, '
+        value: '[panel=2]I travel around the world as a famous alchemist, '
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -949,7 +889,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "[panel=3] .\\,.\\,.\\,\"That day fastly approached again\", \\. I
+        value: "[panel=3].\\,.\\,.\\,\"That day fastly approached again\", \\. I
           thought to myself again.\r"
         type: 0
         typeString: CustomFieldType_Text
@@ -990,7 +930,7 @@ MonoBehaviour:
       conditionsString: 
       userScript: 'FadeOut(1);
 
-        MusicFadeIn(0.03, 30, 1)'
+        MusicFadeIn(0.03, 10, 1)'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -1023,7 +963,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Actor
       - title: Menu Text
-        value: "[panel=3]\u201C..... \\.It really has been 5 years since [em1]that[/em1].\u201C"
+        value: "[panel=3].\\,.\\,.\\,.\\,.\u201CIt really has been 5 years since
+          [em1]that[/em1].\u201C"
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
@@ -1065,14 +1006,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: MusicFadeIn(0.21, 30, 1)
+      userScript: MusicFadeIn(0.21, 10, 1)
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 324.44458
-        y: 426.91077
+        x: 343.00128
+        y: 446.37823
         width: 160
         height: 30
     - id: 21
@@ -1136,7 +1077,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: MusicFadeIn(0.06, 30, 1);
+      userScript: MusicFadeIn(0.06, 10, 1);
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -1208,13 +1149,13 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: MusicFadeIn(0.15, 30, 1)
+      userScript: MusicFadeIn(0.15, 10, 1)
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 338.25528
+        x: 341.24036
         y: 317.0679
         width: 160
         height: 30
@@ -1280,14 +1221,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: MusicFadeIn(0.09, 30, 1)
+      userScript: MusicFadeIn(0.09, 10, 1)
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 346.44882
-        y: 230.35826
+        y: 231.85078
         width: 160
         height: 30
     - id: 24
@@ -1352,7 +1293,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: MusicFadeIn(0.12, 30, 1)
+      userScript: MusicFadeIn(0.12, 10, 1)
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -1423,14 +1364,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: MusicFadeIn(0.18, 30, 1)
+      userScript: MusicFadeIn(0.18, 10, 1)
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 331.2875
-        y: 395.73434
+        y: 397.6761
         width: 160
         height: 30
     - id: 26
@@ -1460,7 +1401,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: '[auto]'
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -1498,14 +1439,16 @@ MonoBehaviour:
       conditionsString: 
       userScript: 'FadeSet(1,0.5, 2);
 
-        SetBackground(1);'
+        SetBackground(1);
+
+'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 648.03546
-        y: 473.02496
+        x: 636.37195
+        y: 461.48376
         width: 160
         height: 30
     - id: 27
@@ -1535,7 +1478,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: '[panel=2] A man with short, black hair, as dark as night..'
+        value: '[panel=2]A man with short, black hair, as dark as night..'
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -1606,7 +1549,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: '[panel=2] I knew that he was the kindest person in Veldren.
+        value: '[panel=2]I knew that he was the kindest person in Veldren.
 
 '
         type: 0
@@ -1679,7 +1622,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: '[panel=2]  Eyes like storm clouds, but gazed ever so gently at me'
+        value: '[panel=2]Eyes like storm clouds, but gazed ever so gently at me'
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -1750,7 +1693,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "[panel=2] He carried a cold expression in his face, with his arms
+        value: "[panel=2]He carried a cold expression in his face, with his arms
           crossed as he approached, but I knew.\r"
         type: 0
         typeString: CustomFieldType_Text
@@ -1822,7 +1765,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: '[panel=2] I called out his name.'
+        value: '[panel=2]I called out his name.'
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -3851,7 +3794,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SetCG(1)
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -5249,7 +5192,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: '[auto]'
+        value: '[panel=2]\,'
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -5265,7 +5208,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: Continue() @0.5;
+        value: Continue() @1;
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 1
@@ -5279,18 +5222,18 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 79
         destinationConversationID: 1
-        destinationDialogueID: 13
+        destinationDialogueID: 345
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: MusicFadeOut(0.2)
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 644.54535
-        y: 513.8902
+        x: 615.02637
+        y: 525.926
         width: 160
         height: 30
     - id: 80
@@ -23263,6 +23206,86 @@ MonoBehaviour:
         y: 6844.689
         width: 160
         height: 30
+    - id: 345
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 3
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 3
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "[panel=2]A small garden-like place near the borders of Filenore and
+          Everwatch.\r"
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 345
+        destinationConversationID: 1
+        destinationDialogueID: 14
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: MusicFadeIn(1, 1, 2)
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 347.4664
+        y: 546.7474
+        width: 160
+        height: 30
     entryGroups:
     - name: Intro
       rect:
@@ -23288,8 +23311,8 @@ MonoBehaviour:
         width: 311.72736
         height: 1148.0906
       color: {r: 0.6117647, g: 0.53333336, b: 1, a: 1}
-    canvasScrollPosition: {x: 127.60289, y: 136.09225}
-    canvasZoom: 0.6699999
+    canvasScrollPosition: {x: 18.446594, y: 207.7804}
+    canvasZoom: 1.0299996
   syncInfo:
     syncActors: 0
     syncItems: 0

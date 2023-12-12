@@ -3,42 +3,45 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using PixelCrushers.DialogueSystem;
+using UnityEngine.SceneManagement;
 
 public class BlackOverlay : MonoBehaviour
 {
+    [SerializeField] private Image background;
+    private float fadeDuration = 1f;
+    private float currentAlpha = 0.0f;
+    private float targetAlpha;
 
-    [SerializeField] Image background;
-    float fadeDuration = 1f;
-    float currentAlpha = 0.0f;
-    float targetAlpha;
-    
-    bool fadeIn = false;
-    bool fading = false;
-    bool luaSet = false;
-    void OnEnable()
+    private bool fadeIn = false;
+    private bool fading = false;
+
+    protected virtual void OnEnable()
     {
-
-
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
-    void OnDisable()
+
+    private void OnDisable()
     {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+
         Lua.UnregisterFunction(nameof(FadeIn));
         Lua.UnregisterFunction(nameof(FadeOut));
         Lua.UnregisterFunction(nameof(FadeSet));
     }
+
+    public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Lua.RegisterFunction(nameof(FadeIn), this, SymbolExtensions.GetMethodInfo(() => FadeIn(0f)));
+        Lua.RegisterFunction(nameof(FadeSet), this, SymbolExtensions.GetMethodInfo(() => FadeSet(0f, 0f, 0f)));
+        Lua.RegisterFunction(nameof(FadeOut), this, SymbolExtensions.GetMethodInfo(() => FadeOut(0f)));
+    }
+
     private void Update()
     {
-        if (luaSet == false && DialogueManager.isConversationActive)
-        {
-            luaSet = true;
-            Lua.RegisterFunction(nameof(FadeIn), this, SymbolExtensions.GetMethodInfo(() => FadeIn(0f)));
-            Lua.RegisterFunction(nameof(FadeSet), this, SymbolExtensions.GetMethodInfo(() => FadeSet(0f, 0f, 0f)));
-            Lua.RegisterFunction(nameof(FadeOut), this, SymbolExtensions.GetMethodInfo(() => FadeOut(0f)));
-        }
         if (!fading) return;
 
         float alphaChangeRate = 1.0f / fadeDuration;
-            
+
         currentAlpha = Mathf.MoveTowards(currentAlpha, targetAlpha, alphaChangeRate * Time.deltaTime);
 
         background.color = new Color(background.color.r, background.color.g, background.color.b, currentAlpha);
@@ -46,7 +49,7 @@ public class BlackOverlay : MonoBehaviour
         if (currentAlpha == targetAlpha)
         {
             fading = false;
-            if(fadeIn == false)
+            if (fadeIn == false)
             {
                 background.raycastTarget = false;
             }
@@ -55,15 +58,30 @@ public class BlackOverlay : MonoBehaviour
 
     public void FadeSet(float fadeInSpeed = 1f, float fadeOutSpeed = 1f, float waitSpeed = 2)
     {
-        StartCoroutine(FadeSetCor(fadeInSpeed, fadeOutSpeed));
+        if (!DialogueSkipper.isEndSkip) return;
+        FadeSetVanilla(fadeInSpeed, fadeOutSpeed, waitSpeed);
     }
-    IEnumerator FadeSetCor(float fadeInSpeed, float fadeOutSpeed, float waitSpeed = 2)
+
+    public void FadeSetVanilla(float fadeInSpeed = 1f, float fadeOutSpeed = 1f, float waitSpeed = 2)
     {
-        FadeIn(fadeInSpeed);
-        yield return new WaitForSecondsRealtime(waitSpeed);
-        FadeOut(fadeOutSpeed);
+        Debug.Log("Should Fade");
+        StartCoroutine(FadeSetCor(fadeInSpeed, fadeOutSpeed, waitSpeed));
     }
-    public void FadeIn(float fadeSpeed = 1f) 
+
+    private IEnumerator FadeSetCor(float fadeInSpeed, float fadeOutSpeed, float waitSpeed = 2)
+    {
+        FadeInVanilla(fadeInSpeed);
+        yield return new WaitForSecondsRealtime(waitSpeed);
+        FadeOutVanilla(fadeOutSpeed);
+    }
+
+    public void FadeIn(float fadeSpeed = 1f)
+    {
+        if (!DialogueSkipper.isEndSkip) return;
+        FadeInVanilla(fadeSpeed);
+    }
+
+    public void FadeInVanilla(float fadeSpeed = 1f)
     {
         Time.timeScale = 1;
         background.raycastTarget = true;
@@ -73,7 +91,14 @@ public class BlackOverlay : MonoBehaviour
         fadeIn = true;
         this.fadeDuration = fadeSpeed;
     }
+
     public void FadeOut(float fadeSpeed = 1f)
+    {
+        if (!DialogueSkipper.isEndSkip) return;
+        FadeOutVanilla(fadeSpeed);
+    }
+
+    public void FadeOutVanilla(float fadeSpeed = 1f)
     {
         Time.timeScale = 1;
         currentAlpha = 1;
@@ -81,9 +106,5 @@ public class BlackOverlay : MonoBehaviour
         fading = true;
         fadeIn = false;
         this.fadeDuration = fadeSpeed;
-    }
-    public void ResetBlackOverlay()
-    {
-        luaSet = false;
     }
 }

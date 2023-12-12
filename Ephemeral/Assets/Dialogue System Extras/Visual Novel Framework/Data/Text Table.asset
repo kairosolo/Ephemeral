@@ -15,7 +15,7 @@ MonoBehaviour:
   m_languageKeys:
   - Default
   m_languageValues: 00000000
-  m_fieldKeys: 090000001300000018000000140000000f00000012000000030000000600000011000000010000000c000000080000000d00000010000000050000000e0000000a000000070000001700000015000000040000000b0000000200000016000000190000001a0000001b000000220000001c0000001d0000001e0000001f000000200000002100000024000000
+  m_fieldKeys: 090000001300000018000000140000000f00000012000000030000000600000011000000010000000c000000080000000d00000010000000050000000e0000000a000000070000001700000015000000040000000b0000000200000016000000190000001a0000001b000000220000001c0000001d0000001e0000001f00000020000000210000002400000025000000
   m_fieldValues:
   - m_fieldName: Achievements
     m_keys: 00000000
@@ -37,10 +37,10 @@ MonoBehaviour:
     m_keys: 00000000
     m_values:
     - Back
-  - m_fieldName: Character Speed
+  - m_fieldName: Text Speed
     m_keys: 00000000
     m_values:
-    - Character Speed
+    - Text Speed
   - m_fieldName: Continue
     m_keys: 00000000
     m_values:
@@ -49,10 +49,10 @@ MonoBehaviour:
     m_keys: 00000000
     m_values:
     - Credits
-  - m_fieldName: Effects Volume
+  - m_fieldName: SFX Volume
     m_keys: 00000000
     m_values:
-    - Effects Volume
+    - SFX Volume
   - m_fieldName: GAME TITLE
     m_keys: 00000000
     m_values:
@@ -73,14 +73,14 @@ MonoBehaviour:
     m_keys: 00000000
     m_values:
     - Music Volume
-  - m_fieldName: Options
+  - m_fieldName: Settings
     m_keys: 00000000
     m_values:
-    - Options
-  - m_fieldName: OPTIONS
+    - Settings
+  - m_fieldName: SETTINGS
     m_keys: 00000000
     m_values:
-    - OPTIONS
+    - SETTINGS
   - m_fieldName: Quest Log
     m_keys: 00000000
     m_values:
@@ -157,5 +157,9 @@ MonoBehaviour:
     m_keys: 00000000
     m_values:
     - Gallery
+  - m_fieldName: History
+    m_keys: 00000000
+    m_values:
+    - History
   m_nextLanguageID: 2
-  m_nextFieldID: 37
+  m_nextFieldID: 38
