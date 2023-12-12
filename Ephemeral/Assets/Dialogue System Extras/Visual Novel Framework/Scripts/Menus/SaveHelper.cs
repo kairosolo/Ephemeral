@@ -13,6 +13,7 @@ namespace PixelCrushers.DialogueSystem.VisualNovelFramework
     /// </summary>
     public class SaveHelper : MonoBehaviour
     {
+        [SerializeField] private LoadGamePanel loadGamePanel;
         [SerializeField] private BlackOverlay blackOverlay;
         [SerializeField] private BackgroundHandler backgroundHandler;
         [SerializeField] private ActorManager actorManager;
@@ -142,7 +143,13 @@ namespace PixelCrushers.DialogueSystem.VisualNovelFramework
         public virtual void LoadGame(int slotNum)
         {
             blackOverlay.FadeSetVanilla(.5f, 1, 1);
+            StartCoroutine(LoadGameCor(slotNum));
+        }
 
+        public IEnumerator LoadGameCor(int slotNum)
+        {
+            yield return new WaitForSeconds(.5f);
+            loadGamePanel.Close();
             SceneManager.LoadScene("LoadingScene");
             SaveSystem.LoadFromSlot(slotNum);
         }

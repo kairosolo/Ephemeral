@@ -53,12 +53,12 @@ public class DialogueSkipper : MonoBehaviour
 
     public void AddLine()
     {
-        string currentDialogue = $"{DialogueManager.currentConversationState.subtitle.formattedText.text}\n";
+        string currentDialogue = $"{DialogueManager.currentConversationState.subtitle.formattedText.text}";
         currentDialogue = currentDialogue.Replace("\\.", "").Replace("\\,", "");
 
         if (gameHistory.Contains(currentDialogue)) { return; }
 
-        gameHistory += currentDialogue;
+        gameHistory += $"{currentDialogue}\n\n";
         writer.Write<string>("GameHistory", gameHistory)
         .Commit();
 
@@ -82,7 +82,7 @@ public class DialogueSkipper : MonoBehaviour
         Debug.Log("Should skip");
         if (!skipping || !DialogueManager.isConversationActive) { isEndSkip = true; return; }
 
-        string currentDialogue = $"{DialogueManager.currentConversationState.subtitle.formattedText.text}\n";
+        string currentDialogue = $"{DialogueManager.currentConversationState.subtitle.formattedText.text}";
         currentDialogue = currentDialogue.Replace("\\.", "").Replace("\\,", "");
 
         if (gameHistory.Contains(currentDialogue))

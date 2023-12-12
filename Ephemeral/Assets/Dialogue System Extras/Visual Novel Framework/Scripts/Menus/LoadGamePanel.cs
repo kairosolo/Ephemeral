@@ -68,7 +68,7 @@ namespace PixelCrushers.DialogueSystem.VisualNovelFramework
 
         public void LoadCurrentSlot()
         {
-            if (loadInProgressPanel != null) loadInProgressPanel.SetActive(true);
+            //if (loadInProgressPanel != null) loadInProgressPanel.SetActive(true);
             menus.StartCoroutine(LoadCoroutine());
         }
 
@@ -77,8 +77,8 @@ namespace PixelCrushers.DialogueSystem.VisualNovelFramework
             if (Debug.isDebugBuild) Debug.Log("Dialogue System Menus: Loading game in slot " + currentSlotNum);
             yield return null;
             onLoadGame.Invoke();
-            if (loadInProgressPanel != null) loadInProgressPanel.SetActive(false);
-            menus.HideAllPanels();
+            //if (loadInProgressPanel != null) loadInProgressPanel.SetActive(false);
+            //menus.HideAllPanels();
         }
 
         public void LoadCurrentSlotNow()

@@ -52,6 +52,7 @@ public class HistoryManager : MonoBehaviour
     {
         if (!historyText.text.Contains(gameHistory))
         {
+            historyText.text = "";
             historyText.text += gameHistory;
         }
     }
